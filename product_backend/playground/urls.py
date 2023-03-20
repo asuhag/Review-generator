@@ -4,6 +4,5 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('hello/', views.say_hello),
-    path('sum/', views.return_data)
+    path('input/',views.my_view, name='my_view')
 ]

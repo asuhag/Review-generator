@@ -4,11 +4,16 @@ from django.http import HttpResponse
 # view func takes a req and gives a response
 # a basic request handler
 
-def say_hello(request):
-    #return HttpResponse('Hello World')
-    return render(request, 'input.html')
-
-def return_data(request):
-    a = 3
-    b = 4
-    return HttpResponse(float(a+b))
+def my_view(request):
+    if request.method == 'POST':
+        user_input = request.POST.get('user_input', '')
+        
+        # Process the user input with Python code here
+        
+        # Return the result as a string
+        result = "Result: " + user_input.upper()
+        
+        # Render the result back to the user
+        return render(request, 'result.html', {'result': result})
+    else:
+        return render(request, 'input.html')
