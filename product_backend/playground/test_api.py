@@ -14,8 +14,8 @@ def output_response(prompt_):
     frequency_penalty=0.0,
     presence_penalty=0.0
     )
-    return response
+    return response["choices"][0]["text"]
 
-input_prompt = 'Write me a review of apple'
-responses = output_response(input_prompt)
-print(responses["choices"][0]["text"])
+#input_prompt = 'Write me a review of apple'
+#responses = output_response(input_prompt)
+#print(responses["choices"][0]["text"])
