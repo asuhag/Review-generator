@@ -6,4 +6,9 @@ from django.http import HttpResponse
 
 def say_hello(request):
     #return HttpResponse('Hello World')
-    return render(request, 'hello.html',{'name':'Anuj'})
+    return render(request, 'input.html')
+
+def return_data(request):
+    a = 3
+    b = 4
+    return HttpResponse(float(a+b))
