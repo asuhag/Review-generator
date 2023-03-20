@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+import test_api
 # Create your views here.
 # view func takes a req and gives a response
 # a basic request handler
